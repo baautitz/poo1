@@ -44,7 +44,7 @@
 			// 
 			// label_TypeData
 			// 
-			this.label_TypeData.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label_TypeData.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label_TypeData.Location = new System.Drawing.Point(12, 9);
 			this.label_TypeData.Name = "label_TypeData";
 			this.label_TypeData.Size = new System.Drawing.Size(310, 29);
@@ -71,7 +71,7 @@
 			this.txt_Password.MinimumSize = new System.Drawing.Size(310, 40);
 			this.txt_Password.Name = "txt_Password";
 			this.txt_Password.PasswordChar = '*';
-			this.txt_Password.Size = new System.Drawing.Size(310, 40);
+			this.txt_Password.Size = new System.Drawing.Size(310, 22);
 			this.txt_Password.TabIndex = 3;
 			this.txt_Password.UseSystemPasswordChar = true;
 			this.txt_Password.WordWrap = false;

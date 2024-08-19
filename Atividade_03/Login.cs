@@ -34,8 +34,6 @@ namespace Atividade_03 {
 
 				Close();
 			} catch (Exception) {
-				txt_User.Text = "";
-				txt_Password.Text = "";
 				MessageBox.Show("Usuário ou senha inválidos!");
 			}
 		}
