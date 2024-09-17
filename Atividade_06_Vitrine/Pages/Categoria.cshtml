@@ -1,23 +1,26 @@
-﻿@page
-@using Atividade_06_Vitrine.Pages
+﻿@page "{nome_categoria}"
 @using Atividade_06_Vitrine.Models
-@model IndexModel
+@using Atividade_06_Vitrine.Pages
+@model CategoriaModel
 @{
-    ViewData["Title"] = "Tudo";
+    ViewData["Title"] = Model.Categoria.Nome;
     Layout = "_Layout";
 }
 
 <div class="product-grid">
-    @foreach (Produto produto in Model.Produtos)
+    @foreach (Produto produto in Model.Categoria.Produtos)
     {
         <div class="product-card">
             <img src="@produto.ImageURL" alt="@produto.Descricao">
             <h2>@produto.Descricao</h2>
-            @if (@produto.Desconto > 0) {
+            @if (@produto.Desconto > 0)
+            {
                 <p class="price from-price">De: R$ @produto.ValorBruto.ToString("0.00")</p>
                 <p class="price to-price">Por: R$ @produto.CalcularValorLiquido().ToString("0.00")</p>
                 <p class="discount">@produto.CalcularPorcentagem().ToString()% OFF</p>
-            } else {
+            }
+            else
+            {
                 <p class="price to-price">Preço: R$ @produto.CalcularValorLiquido().ToString("0.00")</p>
             }
         </div>

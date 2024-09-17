@@ -7,7 +7,7 @@ public class Produto {
     public int Codigo { get; set; }
     public string Descricao { get; set; }
     public double ValorBruto { get; set; }
-    public string? ImageURL {  get; set; }
+    public string? ImageURL { get; set; }
 
     public Produto(int codigo, string descricao, double valorBruto, string? imageURL, double desconto) {
         Codigo = codigo;
@@ -37,6 +37,11 @@ public class Produto {
 
             _desconto = value;
         }
+    }
+    
+    public double CalcularPorcentagem()
+    {
+        return Desconto * 100;
     }
 
 }
